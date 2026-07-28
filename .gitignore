@@ -1,0 +1,27 @@
+# OS junk
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor/IDE
+.idea/
+.claude/
+.vscode/
+*.swp
+*.swo
+
+# Go: compiled binaries from `go build`/`go run -o` in backend/src
+# (none currently exist, but `vowifi_scanner`/`main`/`cmd` are common output
+# names for this module — excluded so an accidental local build never gets
+# committed)
+backend/src/vowifi_scanner
+backend/src/main
+backend/src/cmd/cmd
+
+# MaxMind GeoLite2 database: large binary, licensed, not needed to deploy
+# the frontend (only the backend scanner needs it locally to re-run scans)
+backend/data/GeoLite2-City.mmdb
+
+# Node (frontend/ already has its own .gitignore for node_modules/dist/etc.,
+# kept here too in case a node_modules ever appears outside frontend/)
+node_modules/
