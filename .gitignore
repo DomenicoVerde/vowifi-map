@@ -18,9 +18,10 @@ backend/src/vowifi_scanner
 backend/src/main
 backend/src/cmd/cmd
 
-# MaxMind GeoLite2 database: large binary, licensed, not needed to deploy
-# the frontend (only the backend scanner needs it locally to re-run scans)
-backend/data/GeoLite2-City.mmdb
+# backend/data/ holds only externally-downloaded datasets (mcc-mnc-com.csv,
+# GeoLite2-City.mmdb — see backend/README.md for sources) and the
+# scanner-generated results.json: none of it belongs in version control.
+backend/data/*
 
 # Node (frontend/ already has its own .gitignore for node_modules/dist/etc.,
 # kept here too in case a node_modules ever appears outside frontend/)
